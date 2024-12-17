@@ -1,0 +1,200 @@
+/* Cập nhật .wrapper để căn giữa form */
+.wrapper {
+    position: relative;
+    width: 420px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgb(7, 53, 138);
+    border-radius: 10px;
+    color: #333;
+    display: flex;
+    justify-content: center;  /* Căn giữa theo chiều ngang */
+    align-items: center;      /* Căn giữa theo chiều dọc */
+    overflow: hidden;
+    transition: height .2s ease;
+    margin: 0 auto;           /* Căn giữa toàn bộ form */
+}
+
+.wrapper.active {
+    height: 550px; /* Cập nhật chiều cao để chứa thông báo lỗi và các phần tử mới */
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login {
+    transition: translate .18s ease;
+    translate: 0;
+}
+
+.wrapper.active .form-box.login {
+    transition: translate .18s ease;
+    translate: -400px;
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: translate .18s ease;
+    translate: 400px;
+}
+
+.wrapper.active .form-box.register {
+    transition: translate .18 ease;
+    translate: 0px;
+}
+
+form h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+form .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(11, 60, 255, 0.501);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #333;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #333;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    translate: 0 -50%;
+    font-size: 16px;
+}
+
+form .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 4px;
+}
+
+.remember-forgot a {
+    color: #333;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+form button {
+    width: 100%;
+    height: 45px;
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+}
+
+form .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+/* Thêm style cho role-select */
+.role-select {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(67, 208, 255, 0.1);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #333;
+    padding: 0 20px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="white" d="M4 6l4 4 4-4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    cursor: pointer;
+}
+
+.role-select option {
+    color: #fff;
+    background-color: #333;
+}
+
+.role-select:focus {
+    border-color: rgba(65, 10, 10, 0.5);
+    box-shadow: 0 0 5px rgba(219, 0, 0, 0.5);
+}
+
+/* Điều chỉnh label */
+.role-label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Thêm style cho thông báo lỗi */
+.error-message {
+    font-size: 14px;
+    color: red;
+    margin-top: -15px; /* Đẩy thông báo lỗi gần với input */
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+/* Style cho checkbox điều khoản */
+.terms-conditions {
+    display: flex;
+    align-items: center;
+    margin-top: -10px; /* Điều chỉnh khoảng cách */
+}
+
+.terms-conditions label {
+    font-size: 14px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.terms-conditions input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    accent-color: #333; /* Màu của checkbox */
+}

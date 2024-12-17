@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+}
+
+/* Profile Container */
+.profile-container {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.profile-header {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Profile Card */
+.profile-card {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.profile-card p {
+  margin: 12px 0;
+  font-size: 16px;
+  color: #444;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-card strong {
+  font-weight: 600;
+  color: #333;
+}
+
+.profile-value {
+  font-weight: normal;
+  color: #007bff;
+}
+
+/* Back Button */
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* Chỉ ẩn Header và Footer trong UserProfile */
+.user-profile-page header,
+.user-profile-page footer {
+  display: none;
+}
+
+/* Ensure Content Layout Is Clear */
+.user-profile-page {
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+}
