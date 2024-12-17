@@ -241,7 +241,7 @@ body {
   margin-left: 8px;
 }
 
-.gradient-button a {
+.gradient-button {
   display: inline-block !important;
   padding: 10px 20px !important;
   color: #fff !important;
